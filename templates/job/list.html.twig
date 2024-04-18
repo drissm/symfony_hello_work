@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    {% if jobs.ads is empty %}
+        <h2>Aucun résultat pour votre recherche</h2>
+    {% else %}
+        <h2>Votre résultat de recherche</h2>
+
+        {% for job in jobs.ads %}
+            <div class="job">
+                <a href="{{ job.link }}" target="_blank" title="{{ job.title }}">{{ job.title }}</a><br>
+                <br>
+                {{ job.city }} - {% for contract in job.contractType %}{{ contract }} {% endfor %} - {{ job.company }} - {{ job.jobtitle }}<br>
+                {{ job.publicationDate|date("d m") }} - {{ job.description|raw }}
+            </div>
+        {% endfor %}
+
+        {% include "main/_pagination.html.twig" with { vars: pagination.getVars(jobs.total, app.request) } %}
+    {% endif %}
+{% endblock %}

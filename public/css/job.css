@@ -1,0 +1,50 @@
+.main-container {
+    margin: 0 auto;
+    max-width: 95%;
+}
+
+header {
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+}
+
+header form {
+    display: inline-block;
+    margin-left: 1rem;
+}
+
+main .job {
+    border: 1px solid #000;
+    margin-bottom: .5rem;
+    padding: .5rem;
+}
+
+nav {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+nav ul li {
+    display: inline-block;
+    min-width: 1rem;
+    border: 1px solid #000;
+    margin: .2rem;
+    padding: .2rem;
+    text-align: center;
+    background-color: #e6e6e6;
+}
+nav ul li.inactive {
+    background-color: #fff;
+}
+
+nav ul li a,
+nav ul li a:active,
+nav ul li a:visited {
+    color: #000;
+    text-decoration: none;
+}
+nav ul li a:focus,
+nav ul li a:hover {
+    text-decoration: underline;
+}

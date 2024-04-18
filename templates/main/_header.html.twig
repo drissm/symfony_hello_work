@@ -1,0 +1,10 @@
+{% block header %}
+    <header>
+        <img src="https://www.jobijoba.com/build/images/logo_jobijoba.png" alt="Logo JobiJoba">
+        <form action="{{ path('app_jobs_list') }}">
+            <input type="text" name="what" placeholder="Quel emploi recherchez-vous ?">
+            <input type="text" name="where" placeholder="Où ?">
+            <input type="submit" value="Rechercher">
+        </form>
+    </header>
+{% endblock %}

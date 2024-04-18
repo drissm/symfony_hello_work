@@ -1,0 +1,13 @@
+<nav role="navigation">
+    <ul class="pagination">
+        {% for page, var in vars %}
+            <li class="{{ var.status }}">
+                {% if var.url is not null %}
+                    <a href="{{ var.url }}" title="Aller à la page {{ page }}">{{ page }}</a>
+                {% else %}
+                    {{ page }}
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+</nav>

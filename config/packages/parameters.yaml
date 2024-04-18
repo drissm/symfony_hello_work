@@ -1,0 +1,4 @@
+parameters:
+  jobijoba:
+    client_id: '%env(JOBIJOBA_CLIENT_ID)%'
+    client_secret: '%env(JOBIJOBA_CLIENT_SECRET)%'
